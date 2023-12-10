@@ -4,7 +4,12 @@ set(PROJ BattleCity)
 
 project(${PROJ})
 
-add_executable(${PROJ} src/main.cpp)
+set(CMAKE_CXX_STANDART 17)
+add_executable(${PROJ} 
+
+	src/main.cpp
+	src/Renderer/ShaderProgram.cpp
+	src/Renderer/ShaderProgram.h)
 
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
